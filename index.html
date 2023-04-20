@@ -6,28 +6,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="library.js" defer></script>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>My Library</title>
   </head>
   <body>
     <header class="header" id="header">
-        <div class="title" id="title">
-            <h1 class="titleText" id="titleText">My Library</h1>
-        </div>
-        <div class="bookCount" id="bookCount"></div>
-        <div class="addBook" id="addBook">
-            <img class="addBookButton" id="addBookButton" src="images/book-plus-outline.svg" alt="Add A Book To The Library">
-        </div>
-        <div class="sortBooks" id="sortBooks"></div>
+      <div class="title" id="title">
+        <h1 class="titleText" id="titleText">My Library</h1>
+      </div>
+      <div class="bookCount" id="bookCount"></div>
+      <div class="addBook" id="addBook">
+        <img
+          class="addBookButton"
+          id="addBookButton"
+          src="images/book-plus-outline.svg"
+          alt="Add A Book To The Library"
+        />
+      </div>
+      <div class="sortBooks" id="sortBooks"></div>
     </header>
     <main class="main" id="main">
-        <h3>Your Library is Empty! Try Adding Some Books</h3>
+      <h3>Your Library is Empty! Try Adding Some Books</h3>
     </main>
     <footer class="footer" id="footer"></footer>
     <div class="modalBackground modalInactive" id="modalBackground">
-        <div class="modalContent modalInactive" id="modalContent">
-        
-        </div>
+      <div class="modalContent" id="modalContent">
+        <h2>New Book Entry</h2>
+        <img
+          src="images/window-close.svg"
+          class="modalClose"
+          id="modalClose"
+          alt="Old Paper Background"
+        />
+        <form
+          class="newBookForm"
+          id="newBookForm"
+          name="New Book Entry"
+          method="post"
+        >
+          <title>New Book Entry</title>
+          <label for="bookTitleInput">Title:</label>
+          <input
+            type="text"
+            class="bookTitleInput textInput"
+            id="bookTitleInput"
+            placeholder="Title"
+            title="Book Title"
+            required
+          />
+          <label for="bookAuthorInput">Author:</label>
+          <input
+            type="text"
+            class="bookAuthorInput textInput"
+            id="bookAuthorInput"
+            placeholder="Author"
+            title="Author"
+          />
+          <label for="bookPageInput">Pages:</label>
+          <input
+            type="number"
+            class="bookPageInput numberInput"
+            id="bookPageInput"
+            min="1"
+            max="5000"
+            title="Page Count"
+          />
+          <label for="publishYearInput">Year First Published:</label>
+          <input
+            type="number"
+            class="publishYearInput numberInput"
+            id="publishYearInput"
+            min="1000"
+            max="2023"
+            title="Publication Year"
+          />
+          <label for="bookReadCheck">Have You Read This Book?</label>
+          <input
+            type="checkbox"
+            class="bookReadCheck"
+            id="bookReadCheck"
+            title="Have You Read This Book?"
+          />
+        </form>
+      </div>
     </div>
   </body>
 </html>

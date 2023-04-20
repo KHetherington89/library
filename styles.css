@@ -1,75 +1,76 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel');
+@import url("https://fonts.googleapis.com/css2?family=Cinzel");
 
 /*---- MAIN LAYOUT ELEMENTS ----*/
 
-html{
+html {
   height: 100%;
 }
 
 body {
   display: grid;
-  font-family: "Cinzel", sans-serif;
+  font-family: "Cinzel", serif;
   grid-template-rows: 75px 1fr min-content;
   margin: 0;
   min-height: 100%;
   padding: 0;
 }
 
-footer{
+footer {
   background-color: rgb(239, 237, 241);
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
   text-align: center;
   z-index: 1;
 }
 
-header{
+header {
   background-color: rgb(239, 237, 241);
   box-shadow: 0px -0px 50px rgba(0, 0, 0, 1);
   display: grid;
-    grid-template: auto min-content/auto max-content min-content;
-    grid-template-areas: "title" "count" "add"
-                         "sort" "sort" "sort";
+  grid-template: auto min-content/auto max-content min-content;
+  grid-template-areas:
+    "title" "count" "add"
+    "sort" "sort" "sort";
   padding: 20px;
   z-index: 1;
 }
 
-main{
+main {
   background-color: rgb(255, 255, 255);
   text-align: center;
 }
 
-main h3{
+main h3 {
   margin-top: 100px;
 }
 
 /*---- HEADER LAYOUT & CONTENT ----*/
 
-.addBook{
+.addBook {
   align-items: center;
   display: flex;
   grid-area: "add";
 }
 
-.addBookButton{
+.addBookButton {
   height: 2rem;
 }
 
-.bookCount{
+.bookCount {
   align-items: center;
   display: flex;
   grid-area: "count";
   margin: 0 20px;
 }
 
-.bookCountText{
+.bookCountText {
   font-size: 1.2rem;
   margin: 0;
   padding: 0;
 }
 
-.modalBackground{
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4);
+.modalBackground {
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
   height: 100%;
   left: 0;
   overflow: auto;
@@ -79,30 +80,80 @@ main h3{
   z-index: 3;
 }
 
-.modalContent{
+.modalContent {
   background-color: rgb(255, 255, 255);
-  height: 400px;
+  background-image: url(images/grunge-vintage-old-paper-background.jpg);
+  display: flex;
+  height: auto;
+  flex-direction: column;
   margin: 10% auto;
   max-width: 500px;
   min-width: 250px;
+  padding: 20px;
   position: relative;
+  text-align: center;
 }
 
-.modalInactive{
-  display: none;
+.modalContent h2 {
+  text-decoration: underline 3px;
 }
 
-.sortBooks{
+.modalClose {
+  height: 1.2rem;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.modalInactive {
+  /* display: none; */
+}
+
+.newBookForm {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  align-items: center;
+}
+
+.newBookForm input {
+  accent-color: green;
+  background-image: url(images/grunge-vintage-old-paper-background.jpg);
+  border-width: 3px;
+  margin-bottom: 25px;
+}
+
+.newBookForm .bookReadCheck {
+  width: 20px;
+}
+
+.newBookForm input :focus {
+  appearance: none;
+}
+
+.newBookForm label {
+  margin-bottom: 5px;
+}
+
+.newBookForm .numberInput {
+  width: 50px;
+}
+
+.newBookForm .textInput {
+  width: 150px;
+}
+
+.sortBooks {
   grid-area: "sort";
 }
 
-.title{
+.title {
   align-items: center;
   display: flex;
   grid-area: "title";
 }
 
-.titleText{
+.titleText {
   margin: 0;
   padding: 0;
 }
